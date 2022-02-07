@@ -1,3 +1,3 @@
 token: YOUR TOKEN
 prefix: !
-callback: embeds # "normal" or "embeds"
+response: embeds # "normal" or "embeds"
