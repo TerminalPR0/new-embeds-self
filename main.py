@@ -86,7 +86,7 @@ async def play(ctx, *, text):
       "title": "Now, your activity is:",
       "description": f"```\nPlaying {text}\n```"
 }).text
-    await ctx.send(f"||{r['embed']||")
+    await ctx.send(f"||{r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your activity is: `Playing {text}`")
 
@@ -98,7 +98,7 @@ async def play(ctx, *, text):
       "title": "Now, your activity is:",
       "description": f"```\nStreaming {text}\n```"
 }).text
-    await ctx.send(f"||{r['embed']||")
+    await ctx.send(f"||{r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your activity is: `Streaming {text}`")
 
@@ -110,7 +110,7 @@ async def play(ctx, *, text):
       "title": "Now, your activity is:",
       "description": f"```\nListening to {text}\n```"
 }).text
-    await ctx.send(f"||{r['embed']||")
+    await ctx.send(f"||{r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your activity is: `Listening to {text}`")
 
@@ -122,7 +122,7 @@ async def play(ctx, *, text):
       "title": "Now, your activity is:",
       "description": f"```\nWatching {text}\n```"
 }).text
-    await ctx.send(f"||{r['embed']||")
+    await ctx.send(f"||{r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your activity is: `Watching {text}`")
 
@@ -134,7 +134,7 @@ async def play(ctx, *, text):
       "title": "Now, your activity is:",
       "description": f"```\nCompeting {text}\n```"
 }).text
-    await ctx.send(f"||{r['embed']||")
+    await ctx.send(f"||{r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your activity is: `Competing {text}`")
 
@@ -163,7 +163,7 @@ async def status(ctx, *, status):
     r = requests.post("https://embd.tk/api/createEmbed", json = {
       "title": f"Now, your status is: {status}"
 }).text
-    await ctx.send(f"{r['embed']")
+    await ctx.send(f"{r['embed']}")
   elif resp_mode == "normal":
     await ctx.send(f"Now, your status is: {status}")
 
@@ -173,7 +173,7 @@ async def bot_kill(ctx):
     r = requests.post("https://embd.tk/api/createEmbed", json = {
       "title": "Killing the selfbot process..."
 }).text
-    await ctx.send(f"||r['embed']||")
+    await ctx.send(f"||r['embed']}||")
   elif resp_mode == "normal":
     await ctx.send("Killing the selfbot process...")
   sys.exit(1)
