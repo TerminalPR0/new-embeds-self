@@ -1,2 +1,2 @@
 token: YOUR TOKEN
-callback: embed # "normal" or "embeds"
+callback: embeds # "normal" or "embeds"
