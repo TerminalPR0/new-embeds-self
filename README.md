@@ -1,2 +1,3 @@
-# new-embeds-self
+# Discord SelfBot in discord.py
 Working embeds in self-bot in discord.py!
+
