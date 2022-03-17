@@ -5,3 +5,10 @@ Preview:
 
 Working embeds in self-bot in discord.py!
 
+How to download? Click green button "Code" and "Dwonload ZIP"
+
+How to start?
+Edit config.yml
+```python
+python main.py
+```
