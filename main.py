@@ -140,7 +140,7 @@ async def play(ctx, *, text):
     await ctx.send(f"Now, your activity is: `Competing {text}`")
 
 @client.command(name = "type")
-async def type(ctx, *, seconds)
+async def type(ctx, *, seconds):
   async with ctx.typing(float(seconds)):
     time.sleep(float(seconds))
   if resp_mode == "embeds":
