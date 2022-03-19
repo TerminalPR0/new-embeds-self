@@ -2,6 +2,7 @@
 
 Discord SelfBot with working embeds!
 Author: @t3rminalpro (Telegram)
+Some fixed by: Artem bay
 
 """
 
