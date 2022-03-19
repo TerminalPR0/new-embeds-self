@@ -39,7 +39,7 @@ async def on_ready():
 @client.command(name = "help")
 async def help(ctx):
   if resp_mode == "embeds":
-    embed = requests.post("https://embd.tk/api/createEmbed", json = {
+    embed = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": f"Discord SelfBot Example Help",
       "description": f"""
 Command prefix is "{prefix}".
@@ -82,7 +82,7 @@ Made by @t3rminalpro (Telegram)
 async def play(ctx, *, text):
   await client.change_presence(activity = discord.Game(text))
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Now, your activity is:",
       "description": f"```\nPlaying {text}\n```"
 }).text
@@ -94,7 +94,7 @@ async def play(ctx, *, text):
 async def play(ctx, *, text):
   await client.change_presence(activity = discord.Streaming(text, url = "https://twitch.tv/404"))
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Now, your activity is:",
       "description": f"```\nStreaming {text}\n```"
 }).text
@@ -106,7 +106,7 @@ async def play(ctx, *, text):
 async def play(ctx, *, text):
   await client.change_presence(activity = discord.Activity(type = discord.ActivityType.listening, name = text))
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Now, your activity is:",
       "description": f"```\nListening to {text}\n```"
 }).text
@@ -118,7 +118,7 @@ async def play(ctx, *, text):
 async def play(ctx, *, text):
   await client.change_presence(activity = discord.Activity(type = discord.ActivityType.watching, name = text))
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Now, your activity is:",
       "description": f"```\nWatching {text}\n```"
 }).text
@@ -130,7 +130,7 @@ async def play(ctx, *, text):
 async def play(ctx, *, text):
   await client.change_presence(activity = discord.ActivityType.competing, name = text)
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Now, your activity is:",
       "description": f"```\nCompeting {text}\n```"
 }).text
@@ -143,7 +143,7 @@ async def type(ctx, *, seconds)
   async with ctx.typing(float(seconds)):
     time.sleep(float(seconds))
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": f"I have finished typing.",
       "description": f"It took {seconds} seconds."
 }).text
@@ -160,7 +160,7 @@ async def status(ctx, *, status):
   elif status == "offline": type = discord.Status.invisible
   await client.change_presence(status = type)
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": f"Now, your status is: {status}"
 }).text
     await ctx.send(str(json.loads(embed)['embed']))
@@ -170,7 +170,7 @@ async def status(ctx, *, status):
 @client.command(name = "kill")
 async def bot_kill(ctx):
   if resp_mode == "embeds":
-    r = requests.post("https://embd.tk/api/createEmbed", json = {
+    r = requests.post("http://embd.tk/api/createEmbed", json = {
       "title": "Killing the selfbot process..."
 }).text
     await ctx.send(str(json.loads(embed)['embed']))
